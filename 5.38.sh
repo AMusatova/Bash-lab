@@ -1,5 +1,9 @@
 if [ $# -gt 0 ]
 then
+	if !( [ -e .recycler ] )
+	then
+		mkdir .recycler
+	fi	
 	case $1 in
 		"-l")ls ./.recycler/*;;
 		"-d")rm -f ./.recycler/*;;
